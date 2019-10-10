@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const weather = require('weather-js')
 
 module.exports.run = (client, message, args) => {
-
+if(!args.join(" ")) return message.reply("Veuillez indiquer un emplacement!");
   weather.find({ search: args.join(" "), degreeType: 'C' }, function (err, result) {
 
     if (result.length === 0) {
@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
 
     var current = result[0].current;
     var location = result[0].location;
-    const i = new MessageEmbed()
+    const i = new 
       .setColor(0x0040ff)
       .setThumbnail(current.imageUrl)
       .setDescription(`Météo de ${current.observationtime}`,true)
