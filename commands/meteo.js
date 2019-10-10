@@ -12,7 +12,7 @@ if(!args.join(" ")) return message.reply("Veuillez indiquer un emplacement!");
 
     var current = result[0].current;
     var location = result[0].location;
-    const i = new 
+    const i = new MessageEmbed()
       .setColor(0x0040ff)
       .setThumbnail(current.imageUrl)
       .setDescription(`Météo de ${current.observationtime}`,true)
