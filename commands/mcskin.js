@@ -9,7 +9,7 @@
       .setTitle(`**Télécharger le skin de ${name}**`)
       .setURL(`https://minotar.net/download/${name}`)
       .setImage(`https://minotar.net/body/${name}/100.png`);
-    message.channel.send(embed).catch(err => message.reply("Skin Minecraft introuvable");
+    message.channel.send(embed).catch(err => message.reply("Skin Minecraft introuvable"));
   }
 module.exports.config = {
     name: "mcskin",
