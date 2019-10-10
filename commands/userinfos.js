@@ -24,11 +24,7 @@ module.exports.run = async (client, message, args) => {
       true
     )
     .addField(":statue_of_liberty: Status:", s[user.presence.status], true)
-    .addField(
-      ":video_game: Joue à:",
-      `${user.presence.game ? user.presence.game.name || "Rien"}`,
-      true
-    )
+    
     .addField(
       ":door: A rejoint le serveur le:",
       `${moment(message.guild.member(user).joinedAt).format("DD/MM/YYYY")}`
