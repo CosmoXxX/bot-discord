@@ -5,7 +5,8 @@ module.exports.run = async (client, message, args) => {
   if (!user) return message.reply("Utilisation : *rwstats <tag>");
   const ligue = {
     Bronze: "<:Bronze:630332521317400576>",
-    Elite: "<:Elite:630332521514795016>"
+    Elite: "<:Elite:630332521514795016>",
+    
   };
   axios({
     method: "get",
@@ -36,7 +37,7 @@ module.exports.run = async (client, message, args) => {
         )
         .addField("<:18:630340794640760866> Niveau", data.data.expLevel, true)
         .addField(
-          `${ligue[data.data.league.name]} League`,
+          `League`,
           data.data.league.name,
           true
         )
