@@ -1,8 +1,15 @@
 module.exports.run = async (client, message, args) => {
   let user = message.author;
   let use = message.mentions.users.first();
-  let av = `https://cdn.discordapp.com/avatars/${use.id}/${use.avatar}.png?size=2048`;
-  let ava = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=2048`;
+  //let av = `https://cdn.discordapp.com/avatars/${use.id}/${use.avatar}.png?size=2048`;
+  let av = use.displayAvatarURL({
+  size: 1024,
+  format : "png"
+})
+  let ava = user.displayAvatarURL({
+  size: 1024,
+  format : "png"
+})
   const ameClient = require("amethyste-api");
   const ameApi = new ameClient(
     "ff41a095bc493607d2865295c74cf72329fa9681b5fb57c08bae6493d550d7bc3c0433508e04dfd3f2c569d888b8ae33e20529fb1489b6b2e25f92226b6ef1d2"
