@@ -42,7 +42,8 @@ module.exports.run = async (client, message, args) => {
       .addField(
         ":camping: **Images →**",
         "`beautiful` , `crush` , `gay` , `sniper` , `vs`"
-      );
+      )
+      .addField(":link: **Liens →**" , "[Support |](https://discord.gg/bw4vXYv)[ Lien d'invitation](https://discordapp.com/api/oauth2/authorize?client_id=629548457241214986&permissions=8&scope=bot)")
     message.channel.send(embed);
       }
   }
