@@ -1,5 +1,5 @@
-var { MessageEmbed } = require("discord.js");
-var npm = require("api-npm");
+const { MessageEmbed } = require("discord.js");
+const npm = require("api-npm");
 
 module.exports.run = async (client, message, args) => {
   if (!args[0] || args[1])
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
         )
         .addField(`Description`, mod.description);
 
-      return message.channel.send(embed);
+      message.channel.send(embed);
     } catch (e) {
       return message.channel.send(
         `\\❌ | Ce module NPM **n\'existe pas** dans la base de données NPM !`
