@@ -1,6 +1,6 @@
 
   module.exports.run = (client, message, args) => {
-    const name = args.join(" ")
+    const name = args.join(" ")split("").toString().replace(/[!@#\$%\^&\*\(\)\[\]\?\:;'",\.\\\/]/gi, "")
 if (!name) return message.reply("Veuillez saisir le nom d'un skin!");
     //if(name.length < 1) return message.reply("Le pseudo est trop court!");
     const { MessageEmbed } = require("discord.js");
