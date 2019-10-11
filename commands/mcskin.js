@@ -2,6 +2,7 @@
   module.exports.run = (client, message) => {
     //const name = args.join(" ")split("").toString().replace(/[!@#\$%\^&\*\(\)\[\]\?\:;'",\.\\\/]/gi, "")
 var args = message.content.split(" ").slice(1).toString().split("")
+if (!args) return message.reply("Veuillez saisir le nom d'un skin!");
 var test = "" 
 var test2 = "abcdefghijklmnopqrstuvwxyz1234567890" 
 for(var i = 0; i<args.length ; i++) {
@@ -10,8 +11,7 @@ test = test+args[i]
 } 
 }
 //message.channel.send(test)
-if (!args) return message.reply("Veuillez saisir le nom d'un skin!");
-    //if(name.length < 1) return message.reply("Le pseudo est trop court!");
+if(args.length < 1) return message.reply("Le pseudo est trop court!");
     const { MessageEmbed } = require("discord.js");
     const embed = new MessageEmbed()
     .setColor("#0040ff")
