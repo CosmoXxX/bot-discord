@@ -6,7 +6,15 @@ module.exports.run = async (client, message, args) => {
   const ligue = {
     Bronze: "<:Bronze:630332521317400576>",
     Elite: "<:Elite:630332521514795016>",
-    
+    Gold: "<:gold:631496669174956054>",
+    Superstar: "<:superstar:631496669682466817>",
+    Specialist: "<:specialist:631496669623484416>",
+    Supreme: "<:supreme:631497997372489728>",
+    Silver: "<:silver:631496669795581952>",
+    Destroyer: "<:destroyer:631496669632135168>",
+    Legend: "<:legend:631496669619290141>",
+    Champion: "<:champion:631496669275488277>",
+    Ninja: "<:ninja:631496669782999060>"
   };
   axios({
     method: "get",
@@ -37,7 +45,7 @@ module.exports.run = async (client, message, args) => {
         )
         .addField("<:18:630340794640760866> Niveau", data.data.expLevel, true)
         .addField(
-          `League`,
+          `${ligue[data.data.league.name]} League`,
           data.data.league.name,
           true
         )
