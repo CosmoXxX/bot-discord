@@ -6,7 +6,7 @@
   "dependencies": {
     "amethyste-api": "^1.1.1",
     "api-npm": "^1.0.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "blague.xyz": "^1.0.6",
     "body-parser": "^1.19.0",
     "brawlstars": "^1.2.3",
