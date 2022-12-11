@@ -12,7 +12,7 @@
     "brawlstars": "^1.2.3",
     "discord.js": "^12.0.0-dev",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "expresss": "^0.0.0",
     "fortnite": "^4.3.2",
